@@ -1,5 +1,6 @@
-package bloque.bloqueMovimiento;
+package bloque.bloqueMovimiento.test;
 
+import bloque.bloqueMovimiento.BloqueMovimientoDerecha;
 import junit.framework.TestCase;
 import personaje.Personaje;
 
