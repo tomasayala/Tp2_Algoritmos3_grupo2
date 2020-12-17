@@ -9,6 +9,8 @@ public abstract class BloqueMoviemiento implements Bloque{
     Direccion direccion;
 
     @Override
-    public abstract void ejecutarInstruccionSobrePersonaje(Personaje personaje);
+    public  void ejecutarInstruccionSobrePersonaje(Personaje personaje){
+        personaje.moverDireccion(direccion);
+    }
 
 }
