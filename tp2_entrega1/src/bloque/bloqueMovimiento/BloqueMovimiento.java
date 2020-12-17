@@ -4,7 +4,7 @@ import bloque.Bloque;
 import direccion.Direccion;
 import personaje.Personaje;
 
-public abstract class BloqueMoviemiento implements Bloque{
+public abstract class BloqueMovimiento implements Bloque{
 
     Direccion direccion;
 
