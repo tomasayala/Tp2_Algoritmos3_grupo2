@@ -22,8 +22,11 @@ public class Personaje{
     }
 
     public void moverDireccion(Direccion unaDireccion){
+        Coordenada vieja = this.getCoordenada();
         unaDireccion.aplicarMovimiento(this.coordenada);
-        this.lapiz.dibujarLinea();
+        // Mandarle al sector para que mueva el personaje
+        // Armar una posible excepcion aca por si el personaje no se mueve por X motivo
+        this.lapiz.dibujarLinea(vieja, this.coordenada);
     }
 
     //Este mensaje fue creado con fines de testeo

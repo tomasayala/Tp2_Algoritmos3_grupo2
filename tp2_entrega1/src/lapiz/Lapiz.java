@@ -9,6 +9,8 @@ package lapiz;//package com.company;
 
  */
 
+import coordenadas.Coordenada;
+
 /*
       Posible implementacion del patron State para un lapiz
 
@@ -26,5 +28,7 @@ package lapiz;//package com.company;
       }
  */
 public abstract class Lapiz{
-    public abstract int dibujarLinea();
+    // Agregar un atributo de sector de dibujo y el constructor recibe un tablero de Dibujo
+    // Dibujar linea recibe dos coordenadas, desde donde y hasta donde se tiene que dibujar la linea
+    public abstract int dibujarLinea(Coordenada desde, Coordenada hasta);
 }
