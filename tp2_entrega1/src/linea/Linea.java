@@ -5,9 +5,10 @@ import coordenadas.Coordenada;
 public class Linea {
     private Coordenada inicio;
     private Coordenada fin;
-    public Linea( Coordenada desde, Coordenada hasta){
-        this.inicio = desde;
-        this.fin = hasta;
+    public Linea( Coordenada inicio, Coordenada fin){
+        //Crear una excepcion para cuando le pasas una coordenada que es el mismo punto, sino es aca  es en el personaje
+        this.inicio = inicio;
+        this.fin = fin;
     }
 
     // Metodos en un principio con fines de testeo

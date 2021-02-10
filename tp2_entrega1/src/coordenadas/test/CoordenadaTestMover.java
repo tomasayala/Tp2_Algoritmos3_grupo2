@@ -1,8 +1,9 @@
-package coordenadas;
+package coordenadas.test;
 
+import coordenadas.Coordenada;
 import junit.framework.TestCase;
 
-public class CoordenadaTest extends TestCase {
+public class CoordenadaTestMover extends TestCase {
 
     public void testMoverIzquierda() {
         Coordenada coordenada = new Coordenada();

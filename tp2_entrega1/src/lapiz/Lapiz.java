@@ -1,34 +1,44 @@
 package lapiz;//package com.company;
 
 
-// Posiblemente pensar patron State para distintos tipos de lapiz, lapiz rojo, azul
-/*
-    La clase abstracta seria estado y la clase lapiz es concreta. Lo que permite esto es mantener la informacion y cambiar
-    el comportamiento con el atributo state
-
-
- */
-
 import coordenadas.Coordenada;
+import tablero_dibujo.SectorDibujo;
+
+public class Lapiz{
+      private EstadoLapiz estado;
+      private SectorDibujo tablero;
+
+      public Lapiz(SectorDibujo sector){
+        this.estado = new EstadoLapizArriba();
+        this.tablero = sector;
+      }
+
+      public void levantarLapiz(){
+            estado = new EstadoLapizArriba();
+        }
+
+      public void bajarLapiz(){
+            estado = new EstadoLapizAbajo();
+        }
+
+        //Devuelve un numero con propositos de testeos
+
+      public int dibujarLinea(Coordenada desde, Coordenada hasta) {
+        return this.estado.dibujarLineaSobreElTablero( desde, hasta, tablero);
+      }
+
+      //funcion con fines de testeo
+      public EstadoLapiz getEstado() {
+        return estado;
+      }
+}
 
 /*
-      Posible implementacion del patron State para un lapiz
-
-      public class Lapiz{
-      EstadoLapiz estado;
-      ColorLapiz color;
-
-        public Lapiz(){
-        this.estado = new LapizLevantado();
-        this.color = new ColorLapizRojo;
-        }
-        public void setEstado( EstadoLapiz estadoNuevo){
-            estado = estadoNuevo;
-        }
-      }
- */
 public abstract class Lapiz{
     // Agregar un atributo de sector de dibujo y el constructor recibe un tablero de Dibujo
     // Dibujar linea recibe dos coordenadas, desde donde y hasta donde se tiene que dibujar la linea
+    private SectorDibujo tablero;
     public abstract int dibujarLinea(Coordenada desde, Coordenada hasta);
 }
+*/
+

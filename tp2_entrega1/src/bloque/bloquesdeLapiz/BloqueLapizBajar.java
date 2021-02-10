@@ -8,4 +8,9 @@ public class BloqueLapizBajar implements Bloque {
     public void ejecutarInstruccionSobrePersonaje(Personaje personaje) {
         personaje.bajarLapiz();
     }
+    //Falta las pruebas
+    @Override
+    public void ejecutarInstruccionOpuestaSobrePersonaje(Personaje personaje){
+        personaje.subirLapiz();
+    }
 }

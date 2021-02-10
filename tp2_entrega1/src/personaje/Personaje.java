@@ -3,30 +3,31 @@ package personaje;//package tp2.1;
 import coordenadas.Coordenada;
 import direccion.Direccion;
 import lapiz.Lapiz;
-import lapiz.LapizAbajo;
-import lapiz.LapizArriba;
+import tablero_dibujo.SectorDibujo;
 
 public class Personaje{
      private Lapiz lapiz;
      private Coordenada coordenada;
-    public Personaje(){
-        this.lapiz = new LapizArriba();
+     private SectorDibujo tablero;
+    public Personaje(SectorDibujo tableroDibujo){
+        this.lapiz = new Lapiz(tableroDibujo);
         this.coordenada = new Coordenada();
+        this.tablero = tableroDibujo;
     }
     public void bajarLapiz(){
-        this.lapiz = new LapizAbajo();
+        this.lapiz.bajarLapiz();
     }
 
     public void subirLapiz(){
-        this.lapiz = new LapizArriba();
+        this.lapiz.levantarLapiz();
     }
 
-    public void moverDireccion(Direccion unaDireccion){
-        Coordenada vieja = this.getCoordenada();
+    public int moverDireccion(Direccion unaDireccion){
+        Coordenada vieja = new Coordenada( this.coordenada);
         unaDireccion.aplicarMovimiento(this.coordenada);
-        // Mandarle al sector para que mueva el personaje
+        tablero.moverPersonaje(this.coordenada);
         // Armar una posible excepcion aca por si el personaje no se mueve por X motivo
-        this.lapiz.dibujarLinea(vieja, this.coordenada);
+        return this.lapiz.dibujarLinea(vieja, this.coordenada);
     }
 
     //Este mensaje fue creado con fines de testeo

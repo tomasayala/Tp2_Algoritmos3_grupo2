@@ -9,6 +9,16 @@ public class Coordenada {
         this.x = 0;
         this.y = 0;
     }
+    // Constructor para pruebas debe desaparecer
+    public Coordenada(int x, int y){
+        this.x = x;
+        this.y = y;
+    }
+
+    public Coordenada (Coordenada coordenada){
+        this.x = coordenada.getX();
+        this.y = coordenada.getY();
+    }
 
     public void moverIzquierda(){
         this.x -= 1;
