@@ -6,7 +6,7 @@ import personaje.Personaje;
 import java.util.ArrayList;
 
 public class BloqueDeInversion implements Bloque {
-    private ArrayList conjuntoDeBloques;
+    private ArrayList< Bloque> conjuntoDeBloques;
     
     public BloqueDeInversion(){
         this.conjuntoDeBloques = new ArrayList();
@@ -16,22 +16,14 @@ public class BloqueDeInversion implements Bloque {
 
     @Override
     public void ejecutarInstruccionSobrePersonaje(Personaje personaje) {
-        ejecutarInstruccionesOpuestasDelConjuntoDeBloques( conjuntoDeBloques, personaje);
-    }
-    private void ejecutarInstruccionesOpuestasDelConjuntoDeBloques(
-            ArrayList <? extends Bloque> bloquesAInvertir, Personaje personaje){
-        for( Bloque bloque: bloquesAInvertir)
+        for( Bloque bloque: conjuntoDeBloques)
             bloque.ejecutarInstruccionOpuestaSobrePersonaje(personaje);
     }
 
+
     @Override
     public void ejecutarInstruccionOpuestaSobrePersonaje(Personaje personaje) {
-        //ejecutarInstruccionesOpuestasDelConjuntoDeBloques(conjuntoDeBloques, personaje);
-        ejecutarInstruccionesDelConjunto(conjuntoDeBloques, personaje);
-    }
-    // Hay que hacerle test
-    private void ejecutarInstruccionesDelConjunto( ArrayList <? extends Bloque> bloquesAEjecutar, Personaje personaje){
-        for ( Bloque bloque: bloquesAEjecutar)
+        for ( Bloque bloque: conjuntoDeBloques)
             bloque.ejecutarInstruccionSobrePersonaje( personaje);
     }
 }

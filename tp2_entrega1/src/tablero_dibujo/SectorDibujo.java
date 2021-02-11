@@ -9,7 +9,8 @@ import java.util.ArrayList;
 
 public class SectorDibujo {
     // Guardar las lineas que se dibujan en una lista o un Array?
-    private ArrayList coleccionLineas;
+    private ArrayList< Linea> coleccionLineas;
+    // Cambia para que guarde una referencia al personaje
     private Coordenada coordenadaPersonaje;
     public SectorDibujo(){
         this.coleccionLineas = new ArrayList();
