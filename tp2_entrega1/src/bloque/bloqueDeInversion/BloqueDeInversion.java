@@ -26,12 +26,12 @@ public class BloqueDeInversion implements Bloque {
 
     @Override
     public void ejecutarInstruccionOpuestaSobrePersonaje(Personaje personaje) {
-        ejecutarInstruccionesOpuestasDelConjuntoDeBloques(conjuntoDeBloques, personaje);
+        //ejecutarInstruccionesOpuestasDelConjuntoDeBloques(conjuntoDeBloques, personaje);
         ejecutarInstruccionesDelConjunto(conjuntoDeBloques, personaje);
     }
     // Hay que hacerle test
     private void ejecutarInstruccionesDelConjunto( ArrayList <? extends Bloque> bloquesAEjecutar, Personaje personaje){
         for ( Bloque bloque: bloquesAEjecutar)
-            bloque.ejecutarInstruccionOpuestaSobrePersonaje( personaje);
+            bloque.ejecutarInstruccionSobrePersonaje( personaje);
     }
 }
