@@ -12,6 +12,8 @@ public class BloqueDeInversion implements Bloque {
         this.conjuntoDeBloques = new ArrayList();
     }
 
+    public void agregarBloque(Bloque bloqueNuevo){ conjuntoDeBloques.add(bloqueNuevo);}
+
     @Override
     public void ejecutarInstruccionSobrePersonaje(Personaje personaje) {
         ejecutarInstruccionesOpuestasDelConjuntoDeBloques( conjuntoDeBloques, personaje);
@@ -24,7 +26,7 @@ public class BloqueDeInversion implements Bloque {
 
     @Override
     public void ejecutarInstruccionOpuestaSobrePersonaje(Personaje personaje) {
-        //ejecutarInstruccionesOpuestasDelConjuntoDeBloques(conjuntoDeBloques, personaje);
+        ejecutarInstruccionesOpuestasDelConjuntoDeBloques(conjuntoDeBloques, personaje);
         ejecutarInstruccionesDelConjunto(conjuntoDeBloques, personaje);
     }
     // Hay que hacerle test
