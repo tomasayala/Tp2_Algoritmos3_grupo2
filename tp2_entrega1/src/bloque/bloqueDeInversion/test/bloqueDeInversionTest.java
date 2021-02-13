@@ -5,8 +5,10 @@ import bloque.bloqueDeRepeticion.BloqueDeRepeticion;
 import bloque.bloqueMovimiento.BloqueMovimientoArriba;
 import bloque.bloqueMovimiento.BloqueMovimientoDerecha;
 import bloque.bloqueMovimiento.BloqueMovimientoIzquierda;
+import bloque.bloquesdeLapiz.BloqueLapizSubir;
 import direccion.DireccionArriba;
 import junit.framework.TestCase;
+import lapiz.EstadoLapizAbajo;
 import personaje.Personaje;
 import tablero_dibujo.SectorDibujo;
 
@@ -49,7 +51,7 @@ public class bloqueDeInversionTest extends TestCase {
         assertEquals(1, personaje.getCoordenada().getY());
     }
 
-    public void testBloqueDeInversionDentroDeBloqueDeRepeticionEjecutaCantidadEsperadaDeMovimientos(){
+    public void testBloqueDeInversionDentroDeBloqueDeRepeticionSeEjecutaCorrectamente(){
         BloqueDeInversion bloque = new BloqueDeInversion();
         BloqueDeRepeticion loop = new BloqueDeRepeticion(3);
 
@@ -61,5 +63,15 @@ public class bloqueDeInversionTest extends TestCase {
 
         assertEquals(-3, personaje.getCoordenada().getY());
         assertEquals(3, personaje.getCoordenada().getX());
+    }
+
+    public void testBloqueDeInversionInvierteUnLapizCorrecamente(){
+        BloqueDeInversion bloque = new BloqueDeInversion();
+
+        bloque.agregarBloque(new BloqueLapizSubir());
+
+        bloque.ejecutarInstruccionSobrePersonaje(personaje);
+
+        assertTrue( personaje.getLapiz().getEstado() instanceof EstadoLapizAbajo);
     }
 }
