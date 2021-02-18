@@ -12,13 +12,11 @@ import tableroDeAlgoritmos.TableroAlgoritmos;
 
 public class  Interface extends Application {
 
-
-
     @Override
     public void start(Stage window) throws Exception{
         TableroAlgoritmos tableroAlgoritmos = new TableroAlgoritmos();
         //Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        window.setTitle("Hello World");
+        window.setTitle("AlgoBlocks");
 
         VBox layout = new VBox();
         ConfiguradorInterface configurador = new ConfiguradorInterface();

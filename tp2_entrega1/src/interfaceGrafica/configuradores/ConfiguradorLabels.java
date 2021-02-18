@@ -1,12 +1,16 @@
 package interfaceGrafica.configuradores;
 
-import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
 
 public class ConfiguradorLabels {
 
-    public void configurarPosiciones(TextField repeticiones) {
-        repeticiones.setTranslateX(860);
-        repeticiones.setTranslateY(55);
-        repeticiones.setMaxWidth(20);
+    private void moverLabel(Label label, int y, int x){
+        label.setTranslateX(x);
+        label.setTranslateY(y);
+    }
+
+    public void configurarPosiciones(Label dibujo, Label movimiento){
+        moverLabel(dibujo, -275, 810);
+        moverLabel(movimiento, -310, 910);
     }
 }

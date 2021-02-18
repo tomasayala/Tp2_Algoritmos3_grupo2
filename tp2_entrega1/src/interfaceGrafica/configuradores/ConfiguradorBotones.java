@@ -12,7 +12,7 @@ public class ConfiguradorBotones {
         boton.setTranslateY(y);
     }
 
-    public void configuararPosicionBotones(Button arribaCLapiz, Button arribaSLapiz, Button abajoCLapiz, Button abajoSLapiz, Button derechaCLapiz, Button derechaSLapiz, Button izquierdaCLapiz, Button izquierdaSLapiz, Button botonPlay, Button repetir, Button inversion) {
+    public void configuararPosicionBotones(Button arribaCLapiz, Button arribaSLapiz, Button abajoCLapiz, Button abajoSLapiz, Button derechaCLapiz, Button derechaSLapiz, Button izquierdaCLapiz, Button izquierdaSLapiz, Button botonPlay, Button repetir, Button inversion, Button ok) {
         moverBoton(arribaCLapiz, 90, 820);
         moverBoton(arribaSLapiz, 64, 920);
         moverBoton(abajoCLapiz, 55, 820);
@@ -24,9 +24,10 @@ public class ConfiguradorBotones {
         moverBoton(repetir, 30, 815);
         moverBoton(inversion, 5, 905);
         moverBoton(botonPlay, 300, 870);
+        moverBoton(ok, 10, 850);
     }
 
-    public void configuararAcciones(Button arribaCLapiz, Button arribaSLapiz, Button abajoCLapiz, Button abajoSLapiz, Button derechaCLapiz, Button derechaSLapiz, Button izquierdaCLapiz, Button izquierdaSLapiz, Button botonPlay, Button repetir, Button inversion, TableroAlgoritmos tableroAlgoritmos, TextField repeticiones) {
+    public void configuararAcciones(Button arribaCLapiz, Button arribaSLapiz, Button abajoCLapiz, Button abajoSLapiz, Button derechaCLapiz, Button derechaSLapiz, Button izquierdaCLapiz, Button izquierdaSLapiz, Button botonPlay, Button repetir, Button inversion, TableroAlgoritmos tableroAlgoritmos, TextField repeticiones, Button ok) {
         arribaSLapiz.setOnAction(new ClickBotonArriba(tableroAlgoritmos));
         arribaCLapiz.setOnAction(new ClickBotonArriba(tableroAlgoritmos));
         abajoSLapiz.setOnAction(new ClickBotonAbajo(tableroAlgoritmos));

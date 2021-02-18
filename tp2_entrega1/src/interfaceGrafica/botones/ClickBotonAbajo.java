@@ -1,7 +1,6 @@
 package interfaceGrafica.botones;
 
 import bloque.bloqueMovimiento.BloqueMovimientoAbajo;
-import bloque.bloqueMovimiento.BloqueMovimientoArriba;
 import coordenadas.Coordenada;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
