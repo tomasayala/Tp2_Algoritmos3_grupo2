@@ -37,4 +37,7 @@ public class TableroAlgoritmos{
         bloquesDisponibles.add(algoritmoAGuardar);
     }
 
+    public Personaje getPersonaje() {
+        return personaje;
+    }
 }
