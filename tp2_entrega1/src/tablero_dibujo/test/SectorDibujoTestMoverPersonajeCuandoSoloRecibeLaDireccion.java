@@ -1,9 +1,9 @@
 package tablero_dibujo.test;
 
-import direccion.Direccion;
-import direccion.DireccionAbajo;
+import modelo.direccion.Direccion;
+import modelo.direccion.DireccionAbajo;
 import junit.framework.TestCase;
-import personaje.Personaje;
+import modelo.personaje.Personaje;
 import tablero_dibujo.SectorDibujo;
 
 public class SectorDibujoTestMoverPersonajeCuandoSoloRecibeLaDireccion extends TestCase {

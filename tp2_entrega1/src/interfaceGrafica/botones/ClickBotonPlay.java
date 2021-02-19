@@ -1,9 +1,8 @@
 package interfaceGrafica.botones;
 
-import bloque.bloqueMovimiento.BloqueMovimientoArriba;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import tableroDeAlgoritmos.TableroAlgoritmos;
+import modelo.tableroDeAlgoritmos.TableroAlgoritmos;
 
 public class ClickBotonPlay implements EventHandler<ActionEvent>{
     TableroAlgoritmos secuencia;

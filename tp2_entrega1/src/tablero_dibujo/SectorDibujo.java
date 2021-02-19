@@ -1,7 +1,7 @@
 package tablero_dibujo;
 
-import coordenadas.Coordenada;
-import linea.Linea;
+import modelo.coordenas.Coordenada;
+import modelo.linea.Linea;
 
 import java.util.ArrayList;
 

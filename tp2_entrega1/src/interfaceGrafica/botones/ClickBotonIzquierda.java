@@ -1,11 +1,10 @@
 package interfaceGrafica.botones;
 
-import bloque.bloqueMovimiento.BloqueMovimientoDerecha;
-import bloque.bloqueMovimiento.BloqueMovimientoIzquierda;
-import coordenadas.Coordenada;
+import modelo.bloque.bloqueMovimiento.BloqueMovimientoIzquierda;
+import modelo.coordenas.Coordenada;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import tableroDeAlgoritmos.TableroAlgoritmos;
+import modelo.tableroDeAlgoritmos.TableroAlgoritmos;
 
 
 public class ClickBotonIzquierda implements EventHandler<ActionEvent> {

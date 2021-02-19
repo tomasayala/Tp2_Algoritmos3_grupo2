@@ -1,10 +1,10 @@
 package interfaceGrafica.botones;
 
-import bloque.bloqueMovimiento.BloqueMovimientoArriba;
+import modelo.bloque.bloqueMovimiento.BloqueMovimientoArriba;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import tableroDeAlgoritmos.TableroAlgoritmos;
-import coordenadas.Coordenada;
+import modelo.tableroDeAlgoritmos.TableroAlgoritmos;
+import modelo.coordenas.Coordenada;
 
 public class ClickBotonArriba implements EventHandler<ActionEvent> {
     TableroAlgoritmos secuencia;

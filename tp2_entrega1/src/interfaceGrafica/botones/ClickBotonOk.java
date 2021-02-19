@@ -1,10 +1,9 @@
 package interfaceGrafica.botones;
 
-import bloque.bloqueDeInversion.BloqueDeInversion;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.TextField;
-import tableroDeAlgoritmos.TableroAlgoritmos;
+import modelo.tableroDeAlgoritmos.TableroAlgoritmos;
 
 public class ClickBotonOk implements EventHandler<ActionEvent> {
     TableroAlgoritmos secuencia;

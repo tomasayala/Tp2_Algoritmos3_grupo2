@@ -1,14 +1,11 @@
 package interfaceGrafica;
 
-import interfaceGrafica.botones.*;
 import interfaceGrafica.configuradores.ConfiguradorInterface;
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import tableroDeAlgoritmos.TableroAlgoritmos;
+import modelo.tableroDeAlgoritmos.TableroAlgoritmos;
 
 public class  Interface extends Application {
 

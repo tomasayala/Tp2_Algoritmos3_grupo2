@@ -3,7 +3,7 @@ package interfaceGrafica.configuradores;
 import interfaceGrafica.botones.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import tableroDeAlgoritmos.TableroAlgoritmos;
+import modelo.tableroDeAlgoritmos.TableroAlgoritmos;
 
 public class ConfiguradorBotones {
 

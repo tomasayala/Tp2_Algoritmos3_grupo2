@@ -1,11 +1,10 @@
 package interfaceGrafica.botones;
 
-import bloque.bloqueMovimiento.BloqueMovimientoArriba;
-import coordenadas.Coordenada;
+import modelo.coordenas.Coordenada;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import tableroDeAlgoritmos.TableroAlgoritmos;
-import bloque.bloqueMovimiento.BloqueMovimientoDerecha;
+import modelo.tableroDeAlgoritmos.TableroAlgoritmos;
+import modelo.bloque.bloqueMovimiento.BloqueMovimientoDerecha;
 
 public class ClickBotonDerecha implements EventHandler<ActionEvent> {
     TableroAlgoritmos secuencia;
