@@ -3,7 +3,7 @@ package modelo.personaje;//package tp2.1;
 import modelo.coordenas.Coordenada;
 import modelo.direccion.Direccion;
 import modelo.lapiz.Lapiz;
-import tablero_dibujo.SectorDibujo;
+import modelo.tablero_dibujo.SectorDibujo;
 
 public class Personaje{
      private Lapiz lapiz;

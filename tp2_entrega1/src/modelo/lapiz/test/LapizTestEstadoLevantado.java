@@ -6,7 +6,7 @@ import junit.framework.TestCase;
 import modelo.lapiz.EstadoLapizArriba;
 import modelo.lapiz.Lapiz;
 import modelo.personaje.Personaje;
-import tablero_dibujo.SectorDibujo;
+import modelo.tablero_dibujo.SectorDibujo;
 
     public class LapizTestEstadoLevantado extends TestCase {
         private SectorDibujo tablero = new SectorDibujo();

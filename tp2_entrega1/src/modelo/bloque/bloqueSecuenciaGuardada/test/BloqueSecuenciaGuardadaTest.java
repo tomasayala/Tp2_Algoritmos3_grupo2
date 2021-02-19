@@ -10,7 +10,7 @@ import modelo.bloque.bloqueMovimiento.BloqueMovimientoIzquierda;
 import modelo.bloque.bloqueSecuenciaGuardada.BloqueSecuenciaGuardada;
 import junit.framework.TestCase;
 import modelo.personaje.Personaje;
-import tablero_dibujo.SectorDibujo;
+import modelo.tablero_dibujo.SectorDibujo;
 
 import java.util.ArrayList;
 

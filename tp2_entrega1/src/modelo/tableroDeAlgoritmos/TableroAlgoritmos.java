@@ -3,7 +3,7 @@ package modelo.tableroDeAlgoritmos;
 import modelo.bloque.Bloque;
 import modelo.bloque.bloqueSecuenciaGuardada.BloqueSecuenciaGuardada;
 import modelo.personaje.Personaje;
-import tablero_dibujo.SectorDibujo;
+import modelo.tablero_dibujo.SectorDibujo;
 
 import java.util.ArrayList;
 

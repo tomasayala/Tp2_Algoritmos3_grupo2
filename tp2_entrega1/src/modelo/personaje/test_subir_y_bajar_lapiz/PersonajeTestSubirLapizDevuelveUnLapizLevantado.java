@@ -3,7 +3,7 @@ package modelo.personaje.test_subir_y_bajar_lapiz;
 import junit.framework.TestCase;
 import modelo.lapiz.EstadoLapizArriba;
 import modelo.personaje.Personaje;
-import tablero_dibujo.SectorDibujo;
+import modelo.tablero_dibujo.SectorDibujo;
 
 public class PersonajeTestSubirLapizDevuelveUnLapizLevantado extends TestCase {
 

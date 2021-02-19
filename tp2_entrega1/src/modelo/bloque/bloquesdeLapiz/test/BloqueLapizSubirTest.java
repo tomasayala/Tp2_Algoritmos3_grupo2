@@ -4,7 +4,7 @@ import modelo.bloque.bloquesdeLapiz.BloqueLapizSubir;
 import junit.framework.TestCase;
 import modelo.lapiz.EstadoLapizArriba;
 import modelo.personaje.Personaje;
-import tablero_dibujo.SectorDibujo;
+import modelo.tablero_dibujo.SectorDibujo;
 
 public class BloqueLapizSubirTest extends TestCase {
 

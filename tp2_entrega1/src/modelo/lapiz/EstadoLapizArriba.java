@@ -1,7 +1,7 @@
 package modelo.lapiz;//package com.company;
 
 import modelo.coordenas.Coordenada;
-import tablero_dibujo.SectorDibujo;
+import modelo.tablero_dibujo.SectorDibujo;
 
 public class EstadoLapizArriba extends EstadoLapiz{
     @Override

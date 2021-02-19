@@ -1,4 +1,4 @@
-package tablero_dibujo;
+package modelo.tablero_dibujo;
 
 import modelo.coordenas.Coordenada;
 import modelo.linea.Linea;

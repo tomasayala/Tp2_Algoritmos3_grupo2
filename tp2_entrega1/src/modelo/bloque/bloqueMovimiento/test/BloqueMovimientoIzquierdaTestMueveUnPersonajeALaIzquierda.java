@@ -3,7 +3,7 @@ package modelo.bloque.bloqueMovimiento.test;
 import modelo.bloque.bloqueMovimiento.BloqueMovimientoIzquierda;
 import junit.framework.TestCase;
 import modelo.personaje.Personaje;
-import tablero_dibujo.SectorDibujo;
+import modelo.tablero_dibujo.SectorDibujo;
 
 public class BloqueMovimientoIzquierdaTestMueveUnPersonajeALaIzquierda extends TestCase {
 

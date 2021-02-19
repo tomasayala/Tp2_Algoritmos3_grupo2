@@ -3,7 +3,7 @@ package modelo.personaje.test_movimientos;
 import modelo.direccion.DireccionIzquierda;
 import junit.framework.TestCase;
 import modelo.personaje.Personaje;
-import tablero_dibujo.SectorDibujo;
+import modelo.tablero_dibujo.SectorDibujo;
 
 public class PersonajeTestMoverALaIzquierdaMueveELPersonajeALaIzquierda extends TestCase {
     private  SectorDibujo tablero = new SectorDibujo();

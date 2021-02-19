@@ -3,7 +3,7 @@ package modelo.bloque.bloqueMovimiento.test;
 import modelo.bloque.bloqueMovimiento.BloqueMovimientoArriba;
 import junit.framework.TestCase;
 import modelo.personaje.Personaje;
-import tablero_dibujo.SectorDibujo;
+import modelo.tablero_dibujo.SectorDibujo;
 
 public class BloqueMovimientoArribaTestMueveElPersonajeHaciaArriba extends TestCase {
     public void testEjecutarInstruccionSobrePersonaje(){

@@ -4,7 +4,7 @@ import modelo.coordenas.Coordenada;
 import modelo.direccion.DireccionDerecha;
 import junit.framework.TestCase;
 import modelo.personaje.Personaje;
-import tablero_dibujo.SectorDibujo;
+import modelo.tablero_dibujo.SectorDibujo;
 
 public class PersonajeTestMoverHaciaLaDerechaConUnLapizLevantadoNoDibujaUnaLinea extends TestCase {
 

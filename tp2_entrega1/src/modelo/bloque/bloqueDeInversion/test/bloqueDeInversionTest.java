@@ -8,7 +8,7 @@ import modelo.bloque.bloquesdeLapiz.BloqueLapizSubir;
 import junit.framework.TestCase;
 import modelo.lapiz.EstadoLapizAbajo;
 import modelo.personaje.Personaje;
-import tablero_dibujo.SectorDibujo;
+import modelo.tablero_dibujo.SectorDibujo;
 
 public class bloqueDeInversionTest extends TestCase {
     SectorDibujo tablero = new SectorDibujo();
