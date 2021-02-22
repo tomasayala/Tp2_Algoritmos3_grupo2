@@ -5,7 +5,8 @@ import Modelo.linea.Linea;
 
 import java.util.ArrayList;
 
-// Tal vez tenga que ser un Singleton
+// Armar para que sea un Observable, y que notifique cada vez que se mueve el personaje y se dibuje una linea
+// Puede ser que esta clase y el tablero del algoritmos sean los unicos que se comuniquen con la vista
 
 public class SectorDibujo {
     // Guardar las lineas que se dibujan en una lista o un Array?
@@ -26,6 +27,7 @@ public class SectorDibujo {
 
     public void agregarLinea(Linea unaLinea){
         coleccionLineas.add( unaLinea);
+        // Agregar un notify aca
     }
 
     public int cantidadDeLineasDibujadas(){
