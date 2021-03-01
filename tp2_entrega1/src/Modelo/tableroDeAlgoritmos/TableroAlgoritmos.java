@@ -75,9 +75,9 @@ public class TableroAlgoritmos{
         }
     }
 
-    public void guardarAlgoritmo(String nombreAlgortimo){
+    public BloqueSecuenciaGuardada guardarAlgoritmo(String nombreAlgortimo){
         BloqueSecuenciaGuardada algoritmoAGuardar = new BloqueSecuenciaGuardada(secuenciaAEjeutar, nombreAlgortimo);
-        bloquesDisponibles.put(nombreAlgortimo, algoritmoAGuardar);
+        return algoritmoAGuardar;
     }
 
     public Personaje getPersonaje() {

@@ -9,7 +9,6 @@ public class ConfiguradorLeftMenu {
     public void configurarListView(ListView<String> leftMenu, TableroAlgoritmos tablero) {
         nombreDeBloques = leftMenu;
         secuencia = tablero;
-        nombreDeBloques.getItems().add("TomyDios");
     }
 
     //Posible nueva funcion para agregar el proximo bloque a ejecutar que contiene el hash map
@@ -17,5 +16,8 @@ public class ConfiguradorLeftMenu {
         if(secuencia.listaSecuencialesIsVacio()) {
             this.nombreDeBloques.getItems().add(bloque);
         }
+    }
+    public void agregarBloqueSecuencial(String bloque){
+        this.nombreDeBloques.getItems().add(bloque);
     }
 }

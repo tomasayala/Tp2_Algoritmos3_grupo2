@@ -27,22 +27,25 @@ public class Main extends Application {
         ConfiguradorTopMenu configuradorTopMenu = new ConfiguradorTopMenu();
         configuradorTopMenu.configurarHbox(topMenu, margen);
 
+        ListView< String> leftMenu = new ListView<>();
+        ConfiguradorLeftMenu configuradorLeftMenu = new ConfiguradorLeftMenu();
+        configuradorLeftMenu.configurarListView(leftMenu, tablero);
+
         VBox rightMenu = new VBox();
         ConfiguradorRightMenu configuradorRightMenu= new ConfiguradorRightMenu();
-        configuradorRightMenu.configurarVBox(rightMenu, tablero);
-
+        configuradorRightMenu.configurarVBox(rightMenu, tablero, configuradorLeftMenu);
 
         HBox bottomMenu = new HBox(5);
         ConfiguradorBottomMenu configuradorBottomMenu = new ConfiguradorBottomMenu();
         configuradorBottomMenu.configurarHbox( bottomMenu, tablero);
 
-        ListView< String> leftMenu = new ListView<>();
-        ConfiguradorLeftMenu configuradorLeftMenu = new ConfiguradorLeftMenu();
-        configuradorLeftMenu.configurarListView(leftMenu, tablero);
-
         GridPane mapa = new GridPane();
         ConfiguradorMapa configuradorMapa = new ConfiguradorMapa();
         configuradorMapa.configurarGridPane(mapa);
+        Character lapiz = new Character(mapa);
+        lapiz.agregarImagen();
+        mapa.setMinSize(20, 20);
+        mapa.setGridLinesVisible(true);
 
         BorderPane layout = new BorderPane();
         this.settearLayout(layout, topMenu, rightMenu, bottomMenu, mapa, leftMenu , margen);
