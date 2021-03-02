@@ -3,7 +3,7 @@ package Vista;
 
 import Modelo.tableroDeAlgoritmos.TableroAlgoritmos;
 import Vista.configuradores.*;
-import Vista.visibles.Character;
+import Vista.sprites.Character;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;

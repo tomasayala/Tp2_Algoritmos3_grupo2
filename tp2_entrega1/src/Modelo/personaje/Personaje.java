@@ -4,7 +4,7 @@ import Modelo.coordenas.Coordenada;
 import Modelo.direccion.Direccion;
 import Modelo.lapiz.Lapiz;
 import Modelo.tablero_dibujo.SectorDibujo;
-import Vista.visibles.Character;
+import Vista.sprites.Character;
 
 public class Personaje{
      private Lapiz lapiz;
