@@ -4,11 +4,13 @@ import Modelo.coordenas.Coordenada;
 import Modelo.direccion.Direccion;
 import Modelo.lapiz.Lapiz;
 import Modelo.tablero_dibujo.SectorDibujo;
+import Vista.visibles.Character;
 
 public class Personaje{
      private Lapiz lapiz;
      private Coordenada coordenada;
      private SectorDibujo tablero;
+     private Character imagen;
     public Personaje(SectorDibujo tableroDibujo){
         this.lapiz = new Lapiz(tableroDibujo);
         this.coordenada = new Coordenada();
@@ -38,6 +40,14 @@ public class Personaje{
     //Este mensjae fue creado con fines de testeo
     public Lapiz getLapiz() {
         return this.lapiz;
+    }
+
+    public void setCharacter(Character lapiz){
+        imagen = lapiz;
+    }
+
+    public Character getCharacter(){
+        return this.imagen;
     }
 }
 

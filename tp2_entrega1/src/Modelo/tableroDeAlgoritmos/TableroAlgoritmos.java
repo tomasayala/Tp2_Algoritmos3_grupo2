@@ -72,6 +72,7 @@ public class TableroAlgoritmos{
     public void ejecutarSecuencia(){
         for( Bloque bloque: secuenciaAEjeutar) {
             bloque.ejecutarInstruccionSobrePersonaje(personaje);
+            personaje.getCharacter().moverPersonaje(personaje.getCoordenada().getY(), personaje.getCoordenada().getX());
         }
     }
 

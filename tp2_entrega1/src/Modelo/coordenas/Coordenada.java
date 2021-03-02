@@ -21,19 +21,27 @@ public class Coordenada {
     }
 
     public void moverIzquierda(){
-        this.x -= 1;
+       if(this.x > -2){
+           this.x -= 1;
+       }
     }
 
     public void moverDerecha(){
-        this.x += 1;
+        if(this.x < 2) {
+            this.x += 1;
+        }
     }
 
     public void moverArriba(){
-        this.y += 1;
+        if(this.y < 2) {
+            this.y += 1;
+        }
     }
 
     public void moverAbajo(){
-        this.y -= 1;
+        if(this.y > -2) {
+            this.y -= 1;
+        }
     }
 
     public int getX() {
