@@ -5,6 +5,7 @@ import Modelo.direccion.Direccion;
 import Modelo.lapiz.Lapiz;
 import Modelo.tablero_dibujo.SectorDibujo;
 import Vista.sprites.Character;
+import javafx.scene.layout.GridPane;
 
 public class Personaje{
      private Lapiz lapiz;
@@ -48,6 +49,10 @@ public class Personaje{
 
     public Character getCharacter(){
         return this.imagen;
+    }
+
+    public void setGrid(GridPane grid){
+        this.lapiz.setGrid(grid);
     }
 }
 

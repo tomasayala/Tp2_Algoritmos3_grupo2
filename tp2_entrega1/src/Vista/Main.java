@@ -36,7 +36,6 @@ public class Main extends Application {
         ConfiguradorMapa configuradorMapa = new ConfiguradorMapa();
         configuradorMapa.configurarGridPane(mapa);
         mapa.setMinSize(20, 20);
-        mapa.setGridLinesVisible(true);
 
         VBox rightMenu = new VBox();
         ConfiguradorRightMenu configuradorRightMenu= new ConfiguradorRightMenu();
@@ -48,8 +47,8 @@ public class Main extends Application {
 
         Character lapiz = new Character(mapa);
         lapiz.agregarImagen();
-        tablero.getPersonaje().setCharacter(lapiz);
-        tablero.getPersonaje().getLapiz().setGrid(mapa);
+        tablero.setCharacter(lapiz);
+        tablero.setGrid(mapa);
 
         BorderPane layout = new BorderPane();
         this.settearLayout(layout, topMenu, rightMenu, bottomMenu, mapa, leftMenu , margen);

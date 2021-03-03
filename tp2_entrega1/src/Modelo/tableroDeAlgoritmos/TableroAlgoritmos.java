@@ -13,6 +13,8 @@ import Modelo.bloque.bloquesdeLapiz.BloqueLapizBajar;
 import Modelo.bloque.bloquesdeLapiz.BloqueLapizSubir;
 import Modelo.personaje.Personaje;
 import Modelo.tablero_dibujo.SectorDibujo;
+import Vista.sprites.Character;
+import javafx.scene.layout.GridPane;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -83,6 +85,14 @@ public class TableroAlgoritmos{
 
     public Personaje getPersonaje() {
         return personaje;
+    }
+
+    public void setCharacter(Character character){
+        this.personaje.setCharacter(character);
+    }
+
+    public void setGrid(GridPane grid){
+        this.personaje.setGrid(grid);
     }
 
     public Boolean listaSecuencialesIsVacio(){
