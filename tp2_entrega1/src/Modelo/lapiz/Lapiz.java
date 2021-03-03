@@ -18,7 +18,9 @@ public class Lapiz{
             estado = new EstadoLapizArriba();
         }
 
-      public void bajarLapiz(){ estado = new EstadoLapizAbajo(); }
+      public void bajarLapiz(){
+            estado = new EstadoLapizAbajo();
+        }
 
         //Devuelve un numero con propositos de testeos
 
@@ -31,9 +33,9 @@ public class Lapiz{
         return estado;
       }
 
-    public void setGrid(GridPane grilla){
-        this.estado.setGrid(grilla);
-    }
+      public void setGrid(GridPane grid){
+          this.estado.setGrid(grid);
+      }
 }
 
 /*

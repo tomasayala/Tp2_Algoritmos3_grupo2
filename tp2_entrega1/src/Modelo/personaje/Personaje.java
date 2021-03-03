@@ -12,6 +12,7 @@ public class Personaje{
      private Coordenada coordenada;
      private SectorDibujo tablero;
      private Character imagen;
+     private GridPane grilla;
     public Personaje(SectorDibujo tableroDibujo){
         this.lapiz = new Lapiz(tableroDibujo);
         this.coordenada = new Coordenada();
@@ -52,7 +53,11 @@ public class Personaje{
     }
 
     public void setGrid(GridPane grid){
-        this.lapiz.setGrid(grid);
+        grilla = grid;
+    }
+
+    public void asignarGrilla(){
+        this.lapiz.setGrid(grilla);
     }
 }
 

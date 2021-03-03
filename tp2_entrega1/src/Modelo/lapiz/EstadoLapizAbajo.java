@@ -2,6 +2,7 @@ package Modelo.lapiz;//package com.company;
 
 import Modelo.coordenas.Coordenada;
 import Modelo.linea.Linea;
+import Modelo.personaje.Personaje;
 import Modelo.tablero_dibujo.SectorDibujo;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -63,6 +64,7 @@ public class EstadoLapizAbajo extends EstadoLapiz{
 
        int x = calcularPosicionGrillaX(desde, hasta);
        int y = calcularPosicionGrillaY(desde, hasta);
+
 
         if(x==1){
             grid.add(Izquierda, 2+desde.getX(), 2-desde.getY());

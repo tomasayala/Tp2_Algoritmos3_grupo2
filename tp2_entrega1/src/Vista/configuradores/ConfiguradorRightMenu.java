@@ -62,13 +62,13 @@ public class ConfiguradorRightMenu {
 
     private void crearBotonSubirLapiz(ArrayList<Button> botones, TableroAlgoritmos tablero, ConfiguradorLeftMenu configuradorLeftMenu) {
         Button botonSubirLapiz = new Button("Subir Lapiz");
-        botonSubirLapiz.setOnAction(new ClickSubirLapiz(tablero.getPersonaje().getLapiz(), configuradorLeftMenu));
+        botonSubirLapiz.setOnAction(new ClickSubirLapiz(tablero, configuradorLeftMenu));
         botones.add(botonSubirLapiz);
     }
 
     private void crearBotonBajarLapiz(ArrayList<Button> botones, TableroAlgoritmos tablero, ConfiguradorLeftMenu configuradorLeftMenu, GridPane grid) {
         Button botonBajarLapiz = new Button("Bajar Lapiz");
-        botonBajarLapiz.setOnAction(new ClickBajarLapiz(tablero.getPersonaje().getLapiz(), configuradorLeftMenu, grid));
+        botonBajarLapiz.setOnAction(new ClickBajarLapiz(tablero, configuradorLeftMenu, grid));
         botones.add(botonBajarLapiz);
     }
 

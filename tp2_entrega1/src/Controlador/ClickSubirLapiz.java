@@ -1,5 +1,7 @@
 package Controlador;
 
+import Modelo.bloque.bloquesdeLapiz.BloqueLapizSubir;
+import Modelo.tableroDeAlgoritmos.TableroAlgoritmos;
 import Vista.configuradores.ConfiguradorLeftMenu;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -7,17 +9,17 @@ import Modelo.lapiz.Lapiz;
 
 public class ClickSubirLapiz implements EventHandler<ActionEvent> {
 
-    Lapiz lapiz;
+    TableroAlgoritmos tablero;
     ConfiguradorLeftMenu leftMenu;
 
-    public ClickSubirLapiz(Lapiz unLapiz, ConfiguradorLeftMenu configuradorLeftMenu){
-        lapiz = unLapiz;
+    public ClickSubirLapiz(TableroAlgoritmos tableroAlgoritmos, ConfiguradorLeftMenu configuradorLeftMenu){
+        tablero = tableroAlgoritmos;
         leftMenu = configuradorLeftMenu;
     }
 
     @Override
     public void handle(ActionEvent actionEvent){
-        lapiz.levantarLapiz();
+        tablero.agregarProximoBloqueAEjecutar(new BloqueLapizSubir());
         leftMenu.agregarProximoBloque("Subir Lapiz");
     }
 }

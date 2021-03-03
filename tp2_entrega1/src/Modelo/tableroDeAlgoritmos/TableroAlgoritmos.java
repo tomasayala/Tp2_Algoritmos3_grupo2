@@ -11,6 +11,7 @@ import Modelo.bloque.bloqueMovimiento.BloqueMovimientoIzquierda;
 import Modelo.bloque.bloqueSecuenciaGuardada.BloqueSecuenciaGuardada;
 import Modelo.bloque.bloquesdeLapiz.BloqueLapizBajar;
 import Modelo.bloque.bloquesdeLapiz.BloqueLapizSubir;
+import Modelo.lapiz.Lapiz;
 import Modelo.personaje.Personaje;
 import Modelo.tablero_dibujo.SectorDibujo;
 import Vista.sprites.Character;
@@ -87,12 +88,14 @@ public class TableroAlgoritmos{
         return personaje;
     }
 
+    public Lapiz getLapiz(){return this.personaje.getLapiz();}
+
     public void setCharacter(Character character){
         this.personaje.setCharacter(character);
     }
 
     public void setGrid(GridPane grid){
-        this.personaje.setGrid(grid);
+        this.getPersonaje().setGrid(grid);
     }
 
     public Boolean listaSecuencialesIsVacio(){
