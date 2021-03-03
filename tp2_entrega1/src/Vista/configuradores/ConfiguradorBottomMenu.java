@@ -9,11 +9,11 @@ import javafx.scene.layout.HBox;
 
 public class ConfiguradorBottomMenu {
 
-    public void configurarHbox(HBox bottomMenu, TableroAlgoritmos tablero) {
+    public void configurarHbox(HBox bottomMenu, TableroAlgoritmos tablero, ConfiguradorLeftMenu configuradorLeftMenu) {
         Button botonEjecutarAlgoritmo = new Button("Ejecutar Algoritmo");
-        botonEjecutarAlgoritmo.setOnAction(new ClickBotonPlay(tablero));
+        botonEjecutarAlgoritmo.setOnAction(new ClickBotonPlay(tablero, configuradorLeftMenu));
         Button botonGuardarAlgoritmo = new Button("Guardar Algoritmo");
-        botonGuardarAlgoritmo.setOnAction(new ClickBotonGuardar(tablero, bottomMenu));
+        botonGuardarAlgoritmo.setOnAction(new ClickBotonGuardar(tablero, bottomMenu, configuradorLeftMenu));
         bottomMenu.getChildren().addAll(botonEjecutarAlgoritmo, botonGuardarAlgoritmo);
         bottomMenu.setAlignment(Pos.CENTER_RIGHT);
     }

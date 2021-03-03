@@ -5,15 +5,16 @@ import Modelo.tableroDeAlgoritmos.TableroAlgoritmos;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 
 import java.util.ArrayList;
 
 public class ConfiguradorRightMenu {
     int numero = 6;
-    public void configurarVBox(VBox rightMenu, TableroAlgoritmos tablero, ConfiguradorLeftMenu configuradorLeftMenu) {
+    public void configurarVBox(VBox rightMenu, TableroAlgoritmos tablero, ConfiguradorLeftMenu configuradorLeftMenu, GridPane grid) {
         ArrayList<Button> botones = new ArrayList<>();
-        this.crearBotonesMenuDerecho(botones, tablero, rightMenu, configuradorLeftMenu);
+        this.crearBotonesMenuDerecho(botones, tablero, rightMenu, configuradorLeftMenu, grid);
 
         rightMenu.setSpacing(10);
         rightMenu.setAlignment(Pos.TOP_CENTER);
@@ -22,13 +23,13 @@ public class ConfiguradorRightMenu {
         }
     }
 
-    private void crearBotonesMenuDerecho(ArrayList<Button> botones, TableroAlgoritmos tablero, VBox rightMenu, ConfiguradorLeftMenu configuradorLeftMenu) {
+    private void crearBotonesMenuDerecho(ArrayList<Button> botones, TableroAlgoritmos tablero, VBox rightMenu, ConfiguradorLeftMenu configuradorLeftMenu, GridPane grid) {
         this.crearBotonArriba(botones, tablero, configuradorLeftMenu);
         this.crearBotonAbajo(botones, tablero, configuradorLeftMenu);
         this.crearBotonDerecha(botones, tablero, configuradorLeftMenu);
         this.crearBotonIzquierda(botones, tablero, configuradorLeftMenu);
         this.crearBotonSubirLapiz(botones, tablero, configuradorLeftMenu);
-        this.crearBotonBajarLapiz(botones, tablero, configuradorLeftMenu);
+        this.crearBotonBajarLapiz(botones, tablero, configuradorLeftMenu, grid);
         this.crearBotonClose(botones, tablero, rightMenu);
         this.crearBotonRepetir2Veces(botones, tablero, numero, rightMenu, configuradorLeftMenu);
         this.crearBotonRepetir3Veces(botones, tablero, numero, rightMenu, configuradorLeftMenu);
@@ -65,9 +66,9 @@ public class ConfiguradorRightMenu {
         botones.add(botonSubirLapiz);
     }
 
-    private void crearBotonBajarLapiz(ArrayList<Button> botones, TableroAlgoritmos tablero, ConfiguradorLeftMenu configuradorLeftMenu) {
+    private void crearBotonBajarLapiz(ArrayList<Button> botones, TableroAlgoritmos tablero, ConfiguradorLeftMenu configuradorLeftMenu, GridPane grid) {
         Button botonBajarLapiz = new Button("Bajar Lapiz");
-        botonBajarLapiz.setOnAction(new ClickBajarLapiz(tablero.getPersonaje().getLapiz(), configuradorLeftMenu));
+        botonBajarLapiz.setOnAction(new ClickBajarLapiz(tablero.getPersonaje().getLapiz(), configuradorLeftMenu, grid));
         botones.add(botonBajarLapiz);
     }
 

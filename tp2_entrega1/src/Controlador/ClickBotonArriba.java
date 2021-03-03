@@ -16,7 +16,6 @@ public class ClickBotonArriba implements EventHandler<ActionEvent> {
     }
     @Override
     public void handle(ActionEvent actionEvent) {
-        System.out.println("Muevo personaje hacia arriba");
         Coordenada inicio = secuencia.getPersonaje().getCoordenada();
         secuencia.agregarProximoBloqueAEjecutar(new BloqueMovimientoArriba());
         secuencia.getPersonaje().getLapiz().dibujarLinea(inicio, secuencia.getPersonaje().getCoordenada());

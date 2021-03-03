@@ -21,7 +21,6 @@ public class ClickBotonInversion implements EventHandler<ActionEvent> {
 
     @Override
     public void handle(ActionEvent actionEvent) {
-        System.out.println("Agrego un bloque de inversion");
         secuencia.agregarBloqueSecuencial(new BloqueDeInversion());
         menu.getChildren().get(posicion).setVisible(true);
         leftMenu.agregarBloqueSecuencial("Inversion");

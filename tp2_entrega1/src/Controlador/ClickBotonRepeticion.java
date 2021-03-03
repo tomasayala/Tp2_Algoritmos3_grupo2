@@ -23,7 +23,6 @@ public class ClickBotonRepeticion implements EventHandler<ActionEvent> {
 
     @Override
     public void handle(ActionEvent actionEvent) {
-        System.out.println("Agrego un bloque de repeticion");
         secuencia.agregarBloqueSecuencial(new BloqueDeRepeticion(repeticiones));
         menu.getChildren().get(posicion).setVisible(true);
         leftMenu.agregarBloqueSecuencial("Repeticion x" + repeticiones);

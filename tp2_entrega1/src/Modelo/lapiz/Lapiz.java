@@ -3,6 +3,7 @@ package Modelo.lapiz;//package com.company;
 
 import Modelo.coordenas.Coordenada;
 import Modelo.tablero_dibujo.SectorDibujo;
+import javafx.scene.layout.GridPane;
 
 public class Lapiz{
       private EstadoLapiz estado;
@@ -17,9 +18,7 @@ public class Lapiz{
             estado = new EstadoLapizArriba();
         }
 
-      public void bajarLapiz(){
-            estado = new EstadoLapizAbajo();
-        }
+      public void bajarLapiz(){ estado = new EstadoLapizAbajo(); }
 
         //Devuelve un numero con propositos de testeos
 
@@ -31,6 +30,10 @@ public class Lapiz{
       public EstadoLapiz getEstado() {
         return estado;
       }
+
+    public void setGrid(GridPane grilla){
+        this.estado.setGrid(grilla);
+    }
 }
 
 /*

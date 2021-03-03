@@ -20,4 +20,12 @@ public class ConfiguradorLeftMenu {
     public void agregarBloqueSecuencial(String bloque){
         this.nombreDeBloques.getItems().add(bloque);
     }
+
+    public void agregarBloqueGuardado(String bloque){
+        this.nombreDeBloques.getItems().add(bloque);
+    }
+
+    public void limpiarLista(){
+        nombreDeBloques.getItems().clear();
+    }
 }

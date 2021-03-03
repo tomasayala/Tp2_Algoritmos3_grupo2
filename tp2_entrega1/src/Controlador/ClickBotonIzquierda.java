@@ -18,7 +18,6 @@ public class ClickBotonIzquierda implements EventHandler<ActionEvent> {
 
     @Override
     public void handle(ActionEvent actionEvent) {
-        System.out.println("Muevo personaje hacia la izquierda");
         Coordenada inicio = secuencia.getPersonaje().getCoordenada();
         secuencia.agregarProximoBloqueAEjecutar(new BloqueMovimientoIzquierda());
         secuencia.getPersonaje().getLapiz().dibujarLinea(inicio, secuencia.getPersonaje().getCoordenada());

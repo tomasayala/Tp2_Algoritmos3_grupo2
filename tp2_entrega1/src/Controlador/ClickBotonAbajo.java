@@ -16,7 +16,6 @@ public class ClickBotonAbajo implements EventHandler<ActionEvent> {
     }
     @Override
     public void handle(ActionEvent actionEvent) {
-        System.out.println("Muevo personaje hacia abajo");
         Coordenada inicio = secuencia.getPersonaje().getCoordenada();
         secuencia.agregarProximoBloqueAEjecutar(new BloqueMovimientoAbajo());
         secuencia.getPersonaje().getLapiz().dibujarLinea(inicio, secuencia.getPersonaje().getCoordenada());

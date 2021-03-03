@@ -3,6 +3,7 @@ package Controlador;
 import Modelo.bloque.Bloque;
 import Modelo.bloque.bloqueSecuenciaGuardada.BloqueSecuenciaGuardada;
 import Modelo.tableroDeAlgoritmos.TableroAlgoritmos;
+import Vista.configuradores.ConfiguradorLeftMenu;
 import Vista.configuradores.guardarNombre;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -22,9 +23,11 @@ public class ClickBotonGuardar implements EventHandler<ActionEvent> {
     TableroAlgoritmos tablero;
     String nombre;
     HBox menu;
-    public ClickBotonGuardar(TableroAlgoritmos tableroAlgoritmos, HBox bottomMenu){
+    ConfiguradorLeftMenu leftMenu;
+    public ClickBotonGuardar(TableroAlgoritmos tableroAlgoritmos, HBox bottomMenu, ConfiguradorLeftMenu configuradorLeftMenu){
         tablero = tableroAlgoritmos;
         menu = bottomMenu;
+        leftMenu = configuradorLeftMenu;
     }
 
 
@@ -47,11 +50,10 @@ public class ClickBotonGuardar implements EventHandler<ActionEvent> {
 
     @Override
     public void handle(ActionEvent actionEvent) {
-        System.out.println("Guardo Secuencia actual");
         this.display();
         BloqueSecuenciaGuardada bloque = tablero.guardarAlgoritmo(nombre);
         Button nuevo = new Button(nombre);
-        nuevo.setOnAction(new ClickSecuenciaGuardada(tablero, bloque));
+        nuevo.setOnAction(new ClickSecuenciaGuardada(tablero, bloque, leftMenu));
         menu.getChildren().add(nuevo);
     }
 }
