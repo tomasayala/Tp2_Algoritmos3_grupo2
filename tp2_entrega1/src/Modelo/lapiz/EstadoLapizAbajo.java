@@ -2,16 +2,10 @@ package Modelo.lapiz;//package com.company;
 
 import Modelo.coordenas.Coordenada;
 import Modelo.linea.Linea;
-import Modelo.personaje.Personaje;
 import Modelo.tablero_dibujo.SectorDibujo;
-import javafx.animation.FadeTransition;
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
-import javafx.animation.TranslateTransition;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
-import javafx.util.Duration;
 
 import java.util.ArrayList;
 
@@ -49,50 +43,53 @@ public class EstadoLapizAbajo extends EstadoLapiz{
         return hastaY-desdeY;
     }
 
+    private void asignarImagenes(ImageView derecha, ImageView izquierda, ImageView arriba, ImageView abajo){
+        derecha.setImage(mitadHDer);
+        derecha.setFitWidth(width);
+        derecha.setPreserveRatio(true);
+        izquierda.setImage(mitadHIzq);
+        izquierda.setFitWidth(width);
+        izquierda.setPreserveRatio(true);
+        arriba.setImage(mitadVAr);
+        arriba.setFitWidth(width);
+        arriba.setPreserveRatio(true);
+        abajo.setImage(mitadVAb);
+        abajo.setFitWidth(width);
+        abajo.setPreserveRatio(true);
+    }
+
 
     private void dibujarSobreLaGrilla(Coordenada desde, Coordenada hasta){
-        ImageView Derecha = new ImageView();
-        ImageView Izquierda = new ImageView();
-        ImageView Arriba = new ImageView();
-        ImageView Abajo = new ImageView();
-        Derecha.setImage(mitadHDer);
-        Derecha.setFitWidth(width);
-        Derecha.setPreserveRatio(true);
-        Izquierda.setImage(mitadHIzq);
-        Izquierda.setFitWidth(width);
-        Izquierda.setPreserveRatio(true);
-        Arriba.setImage(mitadVAr);
-        Arriba.setFitWidth(width);
-        Arriba.setPreserveRatio(true);
-        Abajo.setImage(mitadVAb);
-        Abajo.setFitWidth(width);
-        Abajo.setPreserveRatio(true);
-
+        ImageView derecha = new ImageView();
+        ImageView izquierda = new ImageView();
+        ImageView arriba = new ImageView();
+        ImageView abajo = new ImageView();
+        asignarImagenes(derecha, izquierda, arriba, abajo);
 
        int x = calcularPosicionGrillaX(desde, hasta);
        int y = calcularPosicionGrillaY(desde, hasta);
 
 
         if(x==1){
-            grid.add(Izquierda, 2+desde.getX(), 2-desde.getY());
-            grid.add(Derecha, 2+hasta.getX(), 2-hasta.getY());
-            listaSprites.add(Derecha);
-            listaSprites.add(Izquierda);
+            grid.add(izquierda, 2+desde.getX(), 2-desde.getY());
+            grid.add(derecha, 2+hasta.getX(), 2-hasta.getY());
+            listaSprites.add(derecha);
+            listaSprites.add(izquierda);
        }else if(x==-1){
-            grid.add(Derecha, 2+desde.getX(), 2-desde.getY());
-            grid.add(Izquierda, 2+hasta.getX(), 2-hasta.getY());
-            listaSprites.add(Izquierda);
-            listaSprites.add(Derecha);
+            grid.add(derecha, 2+desde.getX(), 2-desde.getY());
+            grid.add(izquierda, 2+hasta.getX(), 2-hasta.getY());
+            listaSprites.add(izquierda);
+            listaSprites.add(derecha);
        }else if(y==1){
-            grid.add(Abajo, 2+desde.getX(), 2-desde.getY());
-            grid.add(Arriba, 2+hasta.getX(), 2-hasta.getY());
-            listaSprites.add(Abajo);
-            listaSprites.add(Arriba);
+            grid.add(abajo, 2+desde.getX(), 2-desde.getY());
+            grid.add(arriba, 2+hasta.getX(), 2-hasta.getY());
+            listaSprites.add(abajo);
+            listaSprites.add(arriba);
         }else if(y==-1){
-            grid.add(Arriba, 2+desde.getX(), 2-desde.getY());
-            grid.add(Abajo, 2+hasta.getX(), 2-hasta.getY());
-            listaSprites.add(Arriba);
-            listaSprites.add(Abajo);
+            grid.add(arriba, 2+desde.getX(), 2-desde.getY());
+            grid.add(abajo, 2+hasta.getX(), 2-hasta.getY());
+            listaSprites.add(arriba);
+            listaSprites.add(abajo);
         }
 
     }

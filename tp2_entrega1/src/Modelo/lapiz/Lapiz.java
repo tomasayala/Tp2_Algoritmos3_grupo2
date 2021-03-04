@@ -38,12 +38,3 @@ public class Lapiz{
       }
 }
 
-/*
-public abstract class Lapiz{
-    // Agregar un atributo de sector de dibujo y el constructor recibe un tablero de Dibujo
-    // Dibujar linea recibe dos coordenadas, desde donde y hasta donde se tiene que dibujar la linea
-    private SectorDibujo tablero;
-    public abstract int dibujarLinea(Coordenada desde, Coordenada hasta);
-}
-*/
-

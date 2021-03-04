@@ -19,9 +19,10 @@ public class Character extends Pane {
     public Character(GridPane gridPane){
         grid = gridPane;
         view = new ImageView();
+        agregarImagen();
     }
 
-    public void agregarImagen(){
+    private void agregarImagen(){
         image = new Image("Vista/sprites/lapiz.png");
         view.setImage(image);
         view.setFitWidth(width);

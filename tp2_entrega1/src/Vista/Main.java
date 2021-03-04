@@ -46,7 +46,6 @@ public class Main extends Application {
         configuradorBottomMenu.configurarHbox( bottomMenu, tablero, configuradorLeftMenu);
 
         Character lapiz = new Character(mapa);
-        lapiz.agregarImagen();
         tablero.setCharacter(lapiz);
         tablero.setGrid(mapa);
 
