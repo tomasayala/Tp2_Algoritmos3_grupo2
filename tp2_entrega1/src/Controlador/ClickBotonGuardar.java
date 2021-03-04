@@ -34,13 +34,14 @@ public class ClickBotonGuardar implements EventHandler<ActionEvent> {
     private void display(){
         VBox layout = new VBox();
         TextField input = new TextField();
-        input.setPromptText("Nombre");
         input.setMaxWidth(100);
+        Label label = new Label("Elige un nombre para tu bloque:");
         Button guardar = new Button("Guardar");
         Scene escena = new Scene(layout, 300, 200);
         Stage ventana = new Stage();
+        ventana.setTitle("Asignar Nombre");
         guardar.setOnAction(new guardarNombre(input, ventana));
-        layout.getChildren().addAll(input, guardar);
+        layout.getChildren().addAll(label, input, guardar);
         layout.setAlignment(Pos.CENTER);
         ventana.initModality(Modality.APPLICATION_MODAL);
         ventana.setScene(escena);
