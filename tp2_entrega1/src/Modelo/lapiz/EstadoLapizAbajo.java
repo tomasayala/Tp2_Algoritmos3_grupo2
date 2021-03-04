@@ -4,9 +4,14 @@ import Modelo.coordenas.Coordenada;
 import Modelo.linea.Linea;
 import Modelo.personaje.Personaje;
 import Modelo.tablero_dibujo.SectorDibujo;
+import javafx.animation.FadeTransition;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.animation.TranslateTransition;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
+import javafx.util.Duration;
 
 import java.util.ArrayList;
 
@@ -17,6 +22,7 @@ public class EstadoLapizAbajo extends EstadoLapiz{
     private Image mitadVAb = new Image("Vista/sprites/mediaLineaVAbajo.png");
     private int width = 90;
     private GridPane grid;
+    private ArrayList<ImageView> listaSprites = new ArrayList<ImageView>();
 
 
     @Override
@@ -42,6 +48,7 @@ public class EstadoLapizAbajo extends EstadoLapiz{
         int hastaY = hasta.getY();
         return hastaY-desdeY;
     }
+
 
     private void dibujarSobreLaGrilla(Coordenada desde, Coordenada hasta){
         ImageView Derecha = new ImageView();
@@ -69,15 +76,23 @@ public class EstadoLapizAbajo extends EstadoLapiz{
         if(x==1){
             grid.add(Izquierda, 2+desde.getX(), 2-desde.getY());
             grid.add(Derecha, 2+hasta.getX(), 2-hasta.getY());
+            listaSprites.add(Derecha);
+            listaSprites.add(Izquierda);
        }else if(x==-1){
             grid.add(Derecha, 2+desde.getX(), 2-desde.getY());
             grid.add(Izquierda, 2+hasta.getX(), 2-hasta.getY());
+            listaSprites.add(Izquierda);
+            listaSprites.add(Derecha);
        }else if(y==1){
             grid.add(Abajo, 2+desde.getX(), 2-desde.getY());
             grid.add(Arriba, 2+hasta.getX(), 2-hasta.getY());
+            listaSprites.add(Abajo);
+            listaSprites.add(Arriba);
         }else if(y==-1){
             grid.add(Arriba, 2+desde.getX(), 2-desde.getY());
             grid.add(Abajo, 2+hasta.getX(), 2-hasta.getY());
+            listaSprites.add(Arriba);
+            listaSprites.add(Abajo);
         }
 
     }

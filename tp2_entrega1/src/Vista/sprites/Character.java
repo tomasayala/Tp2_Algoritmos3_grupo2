@@ -1,7 +1,6 @@
 package Vista.sprites;
 
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
+import javafx.animation.*;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.image.Image;
@@ -29,8 +28,6 @@ public class Character extends Pane {
         view.setPreserveRatio(true);
         grid.add(view, coorY, coorX);
     }
-
-
 
     public void moverPersonaje(int x, int y){
         coorX = 2 - x;

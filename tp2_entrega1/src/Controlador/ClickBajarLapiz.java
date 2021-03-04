@@ -18,15 +18,10 @@ public class ClickBajarLapiz implements EventHandler<ActionEvent> {
         tablero = tableroAlgoritmos;
         leftMenu = configuradorLeftMenu;
         grilla = grid;
-        if (grilla != null){
-            System.out.println("hjbvygu");
-        }
     }
 
     @Override
     public void handle(ActionEvent actionEvent){
-        //tablero.getLapiz().bajarLapiz();
-       // tablero.setGrid(grilla);
         tablero.agregarProximoBloqueAEjecutar(new BloqueLapizBajar());
         leftMenu.agregarProximoBloque("Bajar Lapiz");
     }

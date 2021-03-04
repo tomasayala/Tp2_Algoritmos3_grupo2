@@ -15,8 +15,6 @@ public class ClickBotonPlay implements EventHandler<ActionEvent>{
     @Override
     public void handle(ActionEvent actionEvent) {
         secuencia.ejecutarSecuencia();
-        System.out.println(" Y= "+secuencia.getPersonaje().getCoordenada().getY());
-        System.out.println(" X= "+secuencia.getPersonaje().getCoordenada().getX());
         menu.limpiarLista();
         secuencia.limpiarSecuencia();
     }
