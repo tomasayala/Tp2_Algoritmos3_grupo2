@@ -15,14 +15,13 @@ import Modelo.lapiz.Lapiz;
 import Modelo.personaje.Personaje;
 import Modelo.tablero_dibujo.SectorDibujo;
 import Vista.sprites.Character;
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
+import javafx.application.Platform;
 import javafx.scene.layout.GridPane;
-import javafx.util.Duration;
 
-import java.sql.Time;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class TableroAlgoritmos{
     private Personaje personaje;
@@ -76,11 +75,34 @@ public class TableroAlgoritmos{
         }
     }
 
+    private int imprimir(int i){
+        System.out.println(i);
+        return i;
+    }
+
     public void ejecutarSecuencia(){
-        for( Bloque bloque: secuenciaAEjeutar) {
-            bloque.ejecutarInstruccionSobrePersonaje(personaje);
-            personaje.getCharacter().moverPersonaje(personaje.getCoordenada().getY(), personaje.getCoordenada().getX());
-            }
+        Timer timer = new Timer();
+            timer.scheduleAtFixedRate(new TimerTask() {
+                int i = 0;
+                int num = secuenciaAEjeutar.size();
+
+                    @Override
+                    public void run () {
+                    Platform.runLater(new Runnable(){
+                        @Override
+                        public void run() {
+                            if(i < num) {
+                                secuenciaAEjeutar.get(i).ejecutarInstruccionSobrePersonaje(personaje);
+                                personaje.getCharacter().moverPersonaje(personaje.getCoordenada().getY(), personaje.getCoordenada().getX());
+                                i++;
+                            }else{
+                                timer.cancel();
+                                limpiarSecuencia();
+                            }
+                        }
+                    });
+                }
+            }, 500, 500);
     }
 
     public BloqueSecuenciaGuardada guardarAlgoritmo(String nombreAlgortimo){

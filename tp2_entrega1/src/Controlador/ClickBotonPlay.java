@@ -16,6 +16,5 @@ public class ClickBotonPlay implements EventHandler<ActionEvent>{
     public void handle(ActionEvent actionEvent) {
         secuencia.ejecutarSecuencia();
         menu.limpiarLista();
-        secuencia.limpiarSecuencia();
     }
 }
