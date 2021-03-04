@@ -59,5 +59,6 @@ public class Personaje{
     public void asignarGrilla(){
         this.lapiz.setGrid(grilla);
     }
+
 }
 

@@ -13,4 +13,9 @@ public class EstadoLapizArriba extends EstadoLapiz{
 
     public void setGrid(GridPane grilla){
     }
+
+    @Override
+    public void dibujarSobreLaGrilla(Coordenada desde, Coordenada hasta) {
+
+    }
 }

@@ -8,4 +8,7 @@ public abstract class EstadoLapiz {
     public abstract int dibujarLineaSobreElTablero(Coordenada principio, Coordenada fin, SectorDibujo tableroDeDibujo);
 
     public abstract void setGrid(GridPane grilla);
+
+    public abstract void dibujarSobreLaGrilla(Coordenada desde, Coordenada hasta);
+
 }

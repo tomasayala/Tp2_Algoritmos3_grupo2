@@ -5,6 +5,8 @@ import Modelo.coordenas.Coordenada;
 import Modelo.tablero_dibujo.SectorDibujo;
 import javafx.scene.layout.GridPane;
 
+import java.util.ArrayList;
+
 public class Lapiz{
       private EstadoLapiz estado;
       private SectorDibujo tablero;
@@ -25,7 +27,7 @@ public class Lapiz{
         //Devuelve un numero con propositos de testeos
 
       public int dibujarLinea(Coordenada desde, Coordenada hasta) {
-        return this.estado.dibujarLineaSobreElTablero( desde, hasta, tablero);
+          return this.estado.dibujarLineaSobreElTablero( desde, hasta, tablero);
       }
 
       //funcion con fines de testeo
@@ -37,4 +39,5 @@ public class Lapiz{
           this.estado.setGrid(grid);
       }
 }
+
 

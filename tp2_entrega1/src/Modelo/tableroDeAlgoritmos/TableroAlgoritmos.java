@@ -15,8 +15,12 @@ import Modelo.lapiz.Lapiz;
 import Modelo.personaje.Personaje;
 import Modelo.tablero_dibujo.SectorDibujo;
 import Vista.sprites.Character;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.scene.layout.GridPane;
+import javafx.util.Duration;
 
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -76,7 +80,7 @@ public class TableroAlgoritmos{
         for( Bloque bloque: secuenciaAEjeutar) {
             bloque.ejecutarInstruccionSobrePersonaje(personaje);
             personaje.getCharacter().moverPersonaje(personaje.getCoordenada().getY(), personaje.getCoordenada().getX());
-        }
+            }
     }
 
     public BloqueSecuenciaGuardada guardarAlgoritmo(String nombreAlgortimo){

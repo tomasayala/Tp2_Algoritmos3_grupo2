@@ -16,8 +16,6 @@ public class EstadoLapizAbajo extends EstadoLapiz{
     private Image mitadVAb = new Image("Vista/sprites/mediaLineaVAbajo.png");
     private int width = 90;
     private GridPane grid;
-    private ArrayList<ImageView> listaSprites = new ArrayList<ImageView>();
-
 
     @Override
     public int dibujarLineaSobreElTablero(Coordenada desde, Coordenada hasta, SectorDibujo tableroDeDibujo){
@@ -59,7 +57,7 @@ public class EstadoLapizAbajo extends EstadoLapiz{
     }
 
 
-    private void dibujarSobreLaGrilla(Coordenada desde, Coordenada hasta){
+    public void dibujarSobreLaGrilla(Coordenada desde, Coordenada hasta){
         ImageView derecha = new ImageView();
         ImageView izquierda = new ImageView();
         ImageView arriba = new ImageView();
@@ -73,23 +71,15 @@ public class EstadoLapizAbajo extends EstadoLapiz{
         if(x==1){
             grid.add(izquierda, 2+desde.getX(), 2-desde.getY());
             grid.add(derecha, 2+hasta.getX(), 2-hasta.getY());
-            listaSprites.add(derecha);
-            listaSprites.add(izquierda);
        }else if(x==-1){
             grid.add(derecha, 2+desde.getX(), 2-desde.getY());
             grid.add(izquierda, 2+hasta.getX(), 2-hasta.getY());
-            listaSprites.add(izquierda);
-            listaSprites.add(derecha);
        }else if(y==1){
             grid.add(abajo, 2+desde.getX(), 2-desde.getY());
             grid.add(arriba, 2+hasta.getX(), 2-hasta.getY());
-            listaSprites.add(abajo);
-            listaSprites.add(arriba);
         }else if(y==-1){
             grid.add(arriba, 2+desde.getX(), 2-desde.getY());
             grid.add(abajo, 2+hasta.getX(), 2-hasta.getY());
-            listaSprites.add(arriba);
-            listaSprites.add(abajo);
         }
 
     }
