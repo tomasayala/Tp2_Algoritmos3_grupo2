@@ -9,11 +9,12 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.ListView;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.*;
 import javafx.stage.Stage;
+import javafx.scene.image.Image;
+
+import java.awt.*;
 
 public class Main extends Application {
 
@@ -36,6 +37,10 @@ public class Main extends Application {
         ConfiguradorMapa configuradorMapa = new ConfiguradorMapa();
         configuradorMapa.configurarGridPane(mapa);
         mapa.setMinSize(20, 20);
+        mapa.setGridLinesVisible(true);
+
+        BackgroundImage imagen = new BackgroundImage(new Image("Vista/sprites/fondo.jpg"), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, BackgroundSize.DEFAULT);
+        Background fondo = new Background(imagen);
 
         VBox rightMenu = new VBox();
         ConfiguradorRightMenu configuradorRightMenu= new ConfiguradorRightMenu();
@@ -50,6 +55,7 @@ public class Main extends Application {
         tablero.setGrid(mapa);
 
         BorderPane layout = new BorderPane();
+        layout.setBackground(fondo);
         this.settearLayout(layout, topMenu, rightMenu, bottomMenu, mapa, leftMenu , margen);
 
         window.setScene(new Scene(layout, 1000, 600));
@@ -71,8 +77,8 @@ public class Main extends Application {
         layout.setTop(topMenu);
         layout.setRight(rightMenu);
         layout.setBottom( bottomMenu);
-        layout.setCenter(mapa);
         layout.setLeft(leftMenu);
+        layout.setCenter(mapa);
     }
 
     public static void main(String[] args) {

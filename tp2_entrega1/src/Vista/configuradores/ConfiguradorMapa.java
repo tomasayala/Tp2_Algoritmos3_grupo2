@@ -11,7 +11,7 @@ public class ConfiguradorMapa {
     public void configurarGridPane(GridPane mapa) {
         for(int i = 0; i < longitud; i++){
             for(int j = 0; j < longitud; j++){
-                mapa.add(new Rectangle(90, 90, Color.WHITE), i, j);
+                mapa.add(new Rectangle(90, 90, Color.TRANSPARENT), i, j);
             }
         }
     }
