@@ -32,7 +32,7 @@ public class ConfiguradorRightMenu {
         this.crearBotonIzquierda(botones, tablero, configuradorLeftMenu);
         this.crearBotonSubirLapiz(botones, tablero, configuradorLeftMenu);
         this.crearBotonBajarLapiz(botones, tablero, configuradorLeftMenu, grid);
-        this.crearBotonClose(botones, tablero, rightMenu);
+        this.crearBotonClose(botones, tablero, rightMenu, configuradorLeftMenu);
         this.crearBotonRepetir2Veces(botones, tablero, numero, rightMenu, configuradorLeftMenu);
         this.crearBotonRepetir3Veces(botones, tablero, numero, rightMenu, configuradorLeftMenu);
         this.botonInvertirBotones(botones, tablero, numero, rightMenu, configuradorLeftMenu);
@@ -119,13 +119,13 @@ public class ConfiguradorRightMenu {
         botones.add(botonInvertirBloques);
     }
 
-    private void crearBotonClose(ArrayList<Button> botones, TableroAlgoritmos tablero, VBox rightMenu){
+    private void crearBotonClose(ArrayList<Button> botones, TableroAlgoritmos tablero, VBox rightMenu, ConfiguradorLeftMenu configuradorLeftMenu){
         BackgroundImage backgroundImage = new BackgroundImage(image, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER ,new BackgroundSize(40, 20, false, false, false, false));
         Background background = new Background(backgroundImage);
         Button close = new Button("Close");
         close.setBackground(background);
         botones.add(close);
-        close.setOnAction(new ClickBotonClose(tablero, rightMenu, botones.indexOf(close)));
+        close.setOnAction(new ClickBotonClose(tablero, rightMenu, botones.indexOf(close), configuradorLeftMenu));
         botones.get(botones.indexOf(close)).setVisible(false);
         numero = botones.indexOf(close);
     }

@@ -39,5 +39,10 @@ public class ConfiguradorLeftMenu {
 
     public void limpiarLista(){
         nombreDeBloques.getItems().clear();
+        cantidadSecuenciales = 0;
+    }
+
+    public void sacarBloque(){
+        cantidadSecuenciales--;
     }
 }
