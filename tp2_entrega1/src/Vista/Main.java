@@ -37,10 +37,10 @@ public class Main extends Application {
         ConfiguradorMapa configuradorMapa = new ConfiguradorMapa();
         configuradorMapa.configurarGridPane(mapa);
         mapa.setMinSize(20, 20);
-        mapa.setGridLinesVisible(true);
 
-        BackgroundImage imagen = new BackgroundImage(new Image("Vista/sprites/fondo.jpg"), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, BackgroundSize.DEFAULT);
-        Background fondo = new Background(imagen);
+        Image imagen = new Image("Vista/sprites/fondo.jpg");
+        BackgroundImage image = new BackgroundImage(imagen, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, new BackgroundSize(1000, 600, false, false, false, false));
+        Background background = new Background(image);
 
         VBox rightMenu = new VBox();
         ConfiguradorRightMenu configuradorRightMenu= new ConfiguradorRightMenu();
@@ -55,7 +55,7 @@ public class Main extends Application {
         tablero.setGrid(mapa);
 
         BorderPane layout = new BorderPane();
-        layout.setBackground(fondo);
+        layout.setBackground(background);
         this.settearLayout(layout, topMenu, rightMenu, bottomMenu, mapa, leftMenu , margen);
 
         window.setScene(new Scene(layout, 1000, 600));

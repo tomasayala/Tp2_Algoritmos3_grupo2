@@ -4,13 +4,15 @@ import Controlador.*;
 import Modelo.tableroDeAlgoritmos.TableroAlgoritmos;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
 
 import java.util.ArrayList;
 
 public class ConfiguradorRightMenu {
+    private Image lista = new Image("Vista/sprites/boton.png");
+    private BackgroundImage backgroundImage = new BackgroundImage(lista, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, BackgroundSize.DEFAULT);
+    private Background fondo = new Background(backgroundImage);
     int numero = 6;
     public void configurarVBox(VBox rightMenu, TableroAlgoritmos tablero, ConfiguradorLeftMenu configuradorLeftMenu, GridPane grid) {
         ArrayList<Button> botones = new ArrayList<>();
@@ -19,6 +21,7 @@ public class ConfiguradorRightMenu {
         rightMenu.setSpacing(10);
         rightMenu.setAlignment(Pos.TOP_CENTER);
         for (Button boton : botones) {
+            boton.setBackground(fondo);
             rightMenu.getChildren().add(boton);
         }
     }
