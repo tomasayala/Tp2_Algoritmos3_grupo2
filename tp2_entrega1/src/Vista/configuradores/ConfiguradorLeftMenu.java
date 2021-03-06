@@ -6,6 +6,7 @@ import javafx.scene.control.ListView;
 public class ConfiguradorLeftMenu {
     ListView<String> nombreDeBloques;
     TableroAlgoritmos secuencia;
+    int cantidadSecuenciales = 0;
     public void configurarListView(ListView<String> leftMenu, TableroAlgoritmos tablero) {
         nombreDeBloques = leftMenu;
         secuencia = tablero;
@@ -15,14 +16,25 @@ public class ConfiguradorLeftMenu {
     public void agregarProximoBloque(String bloque){
         if(secuencia.listaSecuencialesIsVacio()) {
             this.nombreDeBloques.getItems().add(bloque);
+        }else{
+            this.nombreDeBloques.getItems().add("Dentro : " + bloque);
         }
     }
     public void agregarBloqueSecuencial(String bloque){
-        this.nombreDeBloques.getItems().add(bloque);
+        cantidadSecuenciales++;
+        if(cantidadSecuenciales == 1) {
+            this.nombreDeBloques.getItems().add(bloque);
+        }else{
+            this.nombreDeBloques.getItems().add("Dentro : " + bloque);
+        }
     }
 
     public void agregarBloqueGuardado(String bloque){
-        this.nombreDeBloques.getItems().add(bloque);
+        if(secuencia.listaSecuencialesIsVacio()) {
+            this.nombreDeBloques.getItems().add(bloque);
+        }else{
+            this.nombreDeBloques.getItems().add("Dentro : " + bloque);
+        }
     }
 
     public void limpiarLista(){
